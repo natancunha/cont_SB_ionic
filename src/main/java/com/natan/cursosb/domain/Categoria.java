@@ -1,4 +1,4 @@
-package com.natan.cursosb.categoria;
+package com.natan.cursosb.domain;
 
 import java.io.Serializable;
 
