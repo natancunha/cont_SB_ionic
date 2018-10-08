@@ -2,8 +2,11 @@ package com.natan.cursosb.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
 import com.natan.cursosb.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoComBoleto extends Pagamento {
 	
 	private static final long serialVersionUID = 1L;
