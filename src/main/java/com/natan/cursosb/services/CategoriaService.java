@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.natan.cursosb.domain.Categoria;
+import com.natan.cursosb.dto.CategoriaDTO;
 import com.natan.cursosb.repositories.CategoriaRepository;
 import com.natan.cursosb.services.exceptions.DataIntegrityException;
 import com.natan.cursosb.services.exceptions.ObjectNotFoundException;
@@ -57,8 +58,11 @@ public class CategoriaService {
 		
 		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction) , orderBy);
 		return repo.findAll(pageRequest);
+	}
+	
+	public Categoria fromDTO(CategoriaDTO objDTO) {		
 		
-		
+		return new Categoria(objDTO.getId(),objDTO.getNome());
 		
 	}
 
